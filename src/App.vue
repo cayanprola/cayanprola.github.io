@@ -1,50 +1,28 @@
 <template>
-  <main>
-    <h1>Hi — I'm Cayan</h1>
-    <p>This is a minimal Vue-powered portfolio starter. Replace this with your content.</p>
-    <form @submit.prevent="submitForm">
-      <label>
-        Name
-        <input v-model="form.name" required />
-      </label>
-      <label>
-        Email
-        <input v-model="form.email" type="email" required />
-      </label>
-      <label>
-        Message
-        <textarea v-model="form.message" required></textarea>
-      </label>
-      <button type="submit">Send</button>
-    </form>
-  </main>
+  <div class="min-h-screen text-gray-900">
+    <header class="bg-white shadow">
+      <div class="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
+        <div class="text-lg font-semibold">Cayan Prola</div>
+        <nav class="space-x-4">
+          <router-link to="/" class="text-sm hover:underline">Home</router-link>
+          <router-link to="/about" class="text-sm hover:underline">About</router-link>
+          <router-link to="/contact" class="text-sm hover:underline">Contact</router-link>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-5xl px-6 py-10">
+      <router-view />
+    </main>
+
+    <footer class="text-center text-sm text-gray-500 py-8">© Cayan Prola — Built with Vue + Vite</footer>
+  </div>
 </template>
 
 <script setup>
-import { reactive } from 'vue'
-
-const form = reactive({ name: '', email: '', message: '' })
-
-async function submitForm() {
-  // placeholder — update URL to your backend when ready
-  try {
-    await fetch('https://your-backend.example.com/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form),
-    })
-    alert('Message sent — replace with a nicer success UI')
-    form.name = form.email = form.message = ''
-  } catch (err) {
-    console.error(err)
-    alert('Failed to send — see console')
-  }
-}
+// Nothing specific here — routing and components live in /src/pages
 </script>
 
 <style>
-main { max-width: 720px; margin: 2rem auto; font-family: system-ui, sans-serif }
-form { display: grid; gap: 0.75rem; margin-top: 1rem }
-input, textarea { padding: 0.5rem; border-radius: 4px; border: 1px solid #ccc }
-button { padding: 0.5rem 1rem }
+/* small page-level tweaks handled by Tailwind */
 </style>
