@@ -32,4 +32,3 @@ Routing & styles
 Environment variables
 
 The frontend reads the contact backend URL from `VITE_API_URL`. For local testing you can use the default in `.env.example` (`http://localhost:5000`). When you deploy your Flask backend, set `VITE_API_URL` to its public URL in the repository's secrets or deployment environment.
-My portfolio website.
