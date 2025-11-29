@@ -21,6 +21,9 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          # Set this secret in your repo settings to the public URL of your backend (e.g. https://portfolio-backend.example)
+          VITE_API_URL: ${{ secrets.VITE_API_URL }}
         run: npm run build
 
       - name: Deploy to gh-pages
