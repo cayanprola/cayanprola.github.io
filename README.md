@@ -4,19 +4,19 @@ This repository contains the frontend for my portfolio site. It's built with Vue
 
 Local development
 
-1) Install dependencies
+1. Install dependencies
 
 ```powershell
 npm install
 ```
 
-2) Run in dev mode
+2. Run in dev mode
 
 ```powershell
 npm run dev
 ```
 
-3) Build for production
+3. Build for production
 
 ```powershell
 npm run build
