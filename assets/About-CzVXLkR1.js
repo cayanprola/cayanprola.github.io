@@ -1,0 +1,1 @@
+import{_ as t,c as o,a as e,o as a}from"./index-Dy89nePu.js";const c={},l={class:"space-y-4"};function r(n,s){return a(),o("section",l,[...s[0]||(s[0]=[e("h2",{class:"text-2xl font-semibold"},"About me",-1),e("p",{class:"text-gray-700"}," This is a small placeholder. Replace with your bio, skills, and links to projects. ",-1)])])}const p=t(c,[["render",r]]);export{p as default};
