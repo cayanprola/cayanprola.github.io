@@ -24,14 +24,16 @@ const loading = ref(false)
 const success = ref(false)
 const error = ref('')
 
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000'
+
 async function submitForm () {
   loading.value = true
   error.value = ''
   success.value = false
 
   try {
-    // Update this URL to point to your deployed Flask backend
-    const res = await fetch('https://your-backend.example.com/api/contact', {
+    // endpoint is controlled by VITE_API_URL in production, otherwise uses localhost
+    const res = await fetch(`${API_BASE}/api/contact`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form)
