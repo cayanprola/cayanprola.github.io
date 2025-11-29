@@ -1,5 +1,7 @@
 # Cleaning up repository for frontend-only (Vue)
 
+Status: backend code has been moved to a separate repository at https://github.com/cayanprola/portfolio-backend and this workspace had local virtual environments and node_modules removed so the repo now contains only frontend files.
+
 This repository will become a frontend-only GitHub Pages site with Vue. Follow the steps below to remove backend artifacts from git and prepare a separate backend repo for Flask later.
 
 1. Add `.gitignore` (already done)
@@ -43,3 +45,8 @@ If you'd like, I can:
 
 - scaffold a minimal Vite + Vue project here and add GitHub Actions to build/publish to GitHub Pages, or
 - prepare the new backend repository contents and show a deployable Flask example.
+
+--
+Local cleanup performed in this workspace:
+- `backend-archive/` was extracted, pushed to the backend repo, and removed from this repo.
+- Local directories `flask_venv/`, `vue_venv/`, `node_modules/` and `__pycache__/` were removed from disk here (they are safe to recreate anywhere).
