@@ -23,4 +23,9 @@ npm run build
 ```
 
 The build output is placed in `docs/` so GitHub Actions can deploy it to the `gh-pages` branch for GitHub Pages serving.
+
+Routing & styles
+
+- This project uses Vue Router (pages available at `/`, `/about`, `/contact`).
+- Tailwind CSS is configured — development builds use the Tailwind PostCSS setup included here.
 My portfolio website.
